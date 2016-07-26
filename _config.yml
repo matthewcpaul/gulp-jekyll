@@ -1,34 +1,26 @@
 # Site Config
-
 name: "Jekyll-Gulp"
 description: A basic Jekyll build set up with gulp, gulp-sass, browser-sync, and gulp-gh-pages
 baseurl: "/jekyll-gulp"
 url: https://matthewcpaul.github.io/jekyll-gulp
 
 # Build Settings
-
 markdown: kramdown
-
 highlighter: true
-
 permalink: pretty
 
 # In/ Excludes
-
 include: [".htaccess"]
 exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock", ".jekyll-metadata", "commit-hook.sh", "package.json", "local_config.yml", "README.md"]
 
 # Plugins
-
 assets:
   digest: true
   cache: false
   sources:
-    - "_assets/css"
-    - "_images"
+    - "_site/assets"
 
 # Read and Output Collections
-
 collections:
   commands:
     output: false
