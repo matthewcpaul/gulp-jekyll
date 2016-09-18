@@ -1,5 +1,5 @@
 {
-  "name": "jekyll-gulp",
+  "name": "gulp-jekyll",
   "version": "0.0.0",
   "description": "A basic Jekyll build set up with gulp, gulp-sass, browser-sync, and gulp-gh-pages",
   "main": "gulpfile.js",
@@ -10,17 +10,16 @@
   "author": "Matthew C. Paul",
   "license": "ISC",
   "scripts": {
-    "start": "gulp",
-    "postinstall": "bundle install"
+    "start": "gulp"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssnano": "^2.1.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^2.1.1",
-    "gulp-scss-lint": "^0.3.9",
+    "gulp-scss-lint": "^0.4.0",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0"
   }

@@ -1,0 +1,29 @@
+// Global namespace for nav component
+$nav-namespace: "c-nav" !default;
+
+.#{$nav-namespace} {
+	padding-left: 0;
+	margin-left: 0;
+	list-style-type: none;
+
+	&__item {
+		display: inline-block;
+
+		+.#{$nav-namespace}__item {
+			margin-left: 1.5rem;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $gray-light;
+
+		&:hover {
+			color: $gray-dark;
+		}
+
+		&.active {
+			color: $gray-dark;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 # Site Config
-name: "Jekyll-Gulp"
+name: "Gulp-Jekyll"
 description: A basic Jekyll build set up with gulp, gulp-sass, browser-sync, and gulp-gh-pages
 baseurl: "/jekyll-gulp"
 url: https://matthewcpaul.github.io/jekyll-gulp

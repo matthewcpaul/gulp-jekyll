@@ -31,7 +31,7 @@ gulp.task('serve', ['sass', 'local-build'], function() {
     });
 
     gulp.watch('_styles/scss/**/*.scss', ['sass']);
-    gulp.watch(['index.md', 'about/index.md'], ['local-build']);
+    gulp.watch(['_includes/*.html', '_layouts/*.html', 'index.md', '**/index.md'], ['local-build']);
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
