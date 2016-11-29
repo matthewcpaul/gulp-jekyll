@@ -6,6 +6,7 @@ commit-hook.sh
 
 # Build
 _site
+_styles/css
 
 # Dev Dependencies
 Gemfile.lock
