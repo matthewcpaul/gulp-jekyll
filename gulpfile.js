@@ -41,8 +41,17 @@ gulp.task('default', ['serve']);
 // Build once with only _config.yml for production
 gulp.task('production-build', shell.task(['bundle exec jekyll build']));
 
+// Compile SCSS for production
+gulp.task('sass-production', ['production-build'], function() {
+  return gulp.src('_styles/scss/style.scss')
+  .pipe(sass())
+  .pipe(autoprefixer())
+  .pipe(nano({discardComments: {removeAll: true}}))
+  .pipe(gulp.dest('_site/assets/css'))
+});
+
 // Deploy _site to gh-pages
-gulp.task('deploy-gh-pages', ['production-build'], function () {
+gulp.task('deploy-gh-pages', ['sass-production'], function () {
   return gulp.src('./_site/**/*')
     .pipe(deploy())
 });
