@@ -1,7 +1,4 @@
 ---
 layout: default
-title: Index
-order: 0
+title: Welcome to Gulp-Jekyll!
 ---
-
-# Hello, Gulp-Jekyll  

@@ -1,11 +1,19 @@
 {% include root.html %}
 
+<div class="flex-main">
+
 {% include header.html %}
 
-		<main role="main">
+		<main class="o-main" role="main">
 			<div class="o-wrap">
+				<h1 class="u-mb-2">{{ page.title }}</h1>
 				{{ content }}
 			</div>
 		</main>
-		
+</div>
+
+<div class="flex-footer">
+
 {% include footer.html %}
+
+</div>

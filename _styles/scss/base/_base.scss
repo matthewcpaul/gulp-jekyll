@@ -3,3 +3,10 @@ html, :root {
 	font: 100%/1.75 "Open Sans", sans-serif;
 	color: $gray-dark;
 }
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}

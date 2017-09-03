@@ -1,11 +1,10 @@
 ---
 layout: default
 title: Collection
-order: 3
+order: 2
 ---
 
-# {{ page.title }}
-
 {% for collection in site.collection %}
-- [{{ collection.title }}]({{ collection.url }})
+{: .c-post-list }
+- [{{ collection.title }}]({{ collection.url }}){: .c-post-list-link }
 {% endfor %}

@@ -5,14 +5,10 @@ $header-namespace: "c-header" !default;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 
 	&__title {
 		text-decoration: none;
-	}
-
-	&__nav {
-
 	}
 }

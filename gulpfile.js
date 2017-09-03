@@ -11,15 +11,14 @@ var svgstore     = require('gulp-svgstore');
 var rename       = require('gulp-rename');
 
 // Build incrementally with _config.yml + local_config.yml for development
-gulp.task('local-build', shell.task(['bundle exec jekyll build --config _config.yml, local_config.yml']));
+gulp.task('local-build', shell.task(['bundle exec jekyll build --config _config.yml']));
 
 // Compile SCSS into CSS, sourcemaps, autoprefixer, cssnano + auto-inject into browsers
 gulp.task('sass', ['local-build'], function() {
-  return gulp.src(['_styles/scss/style-archive.scss', '_styles/scss/style-events.scss', '_styles/scss/style-involved.scss', '_styles/scss/style-about.scss'])
+  return gulp.src(['_styles/scss/style.scss'])
   .pipe(sass({
     includePaths: [
       'node_modules/ibm-design-colors',
-      'node_modules/@whitewater/rapid/scss'
     ]
   }))
   .pipe(autoprefixer())
@@ -51,10 +50,10 @@ gulp.task('serve', ['icons'], function() {
 gulp.task('default', ['serve']);
 
 // Pipe CNAME to _site
-gulp.task('cname', function() {
-  return gulp.src(['CNAME'])
-    .pipe(gulp.dest('_site/'));
-});
+// gulp.task('cname', function() {
+//   return gulp.src(['CNAME'])
+//     .pipe(gulp.dest('_site/'));
+// });
 
 // Deploy _site to gh-pages
 gulp.task('deploy-gh-pages', ['icons', 'cname'], function () {
