@@ -1,7 +1,13 @@
+$font-size-change: 32rem;
+
 html, :root {
 	box-sizing: border-box;
-	font: 100%/1.75 "Open Sans", sans-serif;
+	font: 0.875rem/1.75 "Open Sans", sans-serif;
 	color: $gray-dark;
+
+	@include breakpoint($font-size-change) {
+		font-size: 1rem;
+	}
 }
 
 body {
