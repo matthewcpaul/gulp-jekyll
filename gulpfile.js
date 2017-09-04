@@ -58,10 +58,10 @@ gulp.task('cname', function() {
     .pipe(gulp.dest('_site/'));
 });
 
-// Deploy _site to gh-pages NOTE: add the 'cname' task to this tasks dependencies if you need a custom URL
-gulp.task('deploy-gh-pages', gulp.series('production-build', 'sass', 'icons'), function () {
+// Deploy _site to gh-pages; note: add the 'cname' task to this tasks series if you are using a custom URL
+gulp.task('deploy-gh-pages', gulp.series('production-build', 'sass', 'icons'), function() {
   return gulp.src('./_site/**/*')
-    .pipe(deploy())
+    .pipe(deploy());
 });
 
 // Run production-build, and deploy-gh-pages
