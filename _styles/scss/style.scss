@@ -7,6 +7,9 @@
 // Variables
 @import "variables/_all";
 
+// Mixins
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
 // Base styles
 @import "base/_all";
 
