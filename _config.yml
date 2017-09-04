@@ -11,7 +11,7 @@ permalink: pretty
 
 # In/ Excludes
 include: [".htaccess"]
-exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock", ".jekyll-metadata", "commit-hook.sh", "package.json", "local_config.yml", "README.md"]
+exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock", ".jekyll-metadata", "commit-hook.sh", "package.json", "local_config.yml", "README.md", "package-lock.json"]
 
 # Plugins
 assets:
