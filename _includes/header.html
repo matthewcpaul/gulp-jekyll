@@ -1,5 +1,5 @@
 	<header class="o-wrap c-header" role="banner">
-		<a class="c-header__title" href="/">{{ site.name }}</a>
+		<a class="c-header__title" href="{{ site.baseurl }}/">{{ site.name }}</a>
 		<nav class="c-header__nav" role="navigation">
 			<ul class="c-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
 				<li class="c-nav__item">
