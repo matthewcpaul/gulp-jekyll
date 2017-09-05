@@ -16,3 +16,8 @@ body {
 	justify-content: space-between;
 	height: 100vh;
 }
+
+::selection {
+	color: $white;
+	background: $primary;
+}
