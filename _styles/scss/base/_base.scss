@@ -2,7 +2,7 @@ $font-size-change: 32rem;
 
 html, :root {
 	box-sizing: border-box;
-	font: 0.875rem/1.75 "Open Sans", sans-serif;
+	font: 0.875rem/1.75 'Roboto', sans-serif;
 	color: $gray-dark;
 
 	@include breakpoint($font-size-change) {
