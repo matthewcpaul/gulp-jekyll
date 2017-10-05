@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang=en{% if page.class %} class="{{ page.class }}"{% endif %}>
+	<meta charset="utf-8"/>
+	<title>{{ site.name }} &middot; {{ page.title }}</title>
+	<meta name="viewport" content="initial-scale=1" />
+	<meta property="og:title" content="{{ page.title }}"/>
+	<meta property="og:site_name" content="{{ site.name }}"/>
+	<meta property="og:description" content="{{ site.description | strip_html }}"/>
+	<meta property="og:url" content="{{ page.url }}"/>
+
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
+	<link rel="shortcut icon" href="{{ "/images/jekyll-gulp-logo.png" | prepend: site.baseurl }}"/>
+
+	<body>

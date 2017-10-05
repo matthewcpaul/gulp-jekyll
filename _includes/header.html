@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang=en{% if page.class %} class="{{ page.class }}"{% endif %}>
-	<meta charset="utf-8"/>
-	<title>{{ site.name }} - {{ page.title }}</title>
-	<meta name="viewport" content="initial-scale=1" />
-	<meta name="p:domain_verify" content="73bb9724cf18cc4f5f5d8e8553eeb2ff"/>
-
-	<meta property="og:title" content="{{ page.title }}"/>
-	<meta property="og:site_name" content="{{ site.name }}"/>
-	<meta property="og:description" content="{{ site.description | strip_html }}"/>
-	<meta property="og:url" content="{{ page.url }}"/>
-
-	<link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
-
-	<link rel="shortcut icon" href="{{ "/images/jekyll-gulp-logo.png" | prepend: site.baseurl }}"/>
-
-	<body>
-		<header class="o-wrap c-header" role="banner">
-			<a class="c-header__title" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
-			<nav class="c-header__nav" role="navigation">
-				<ul class="c-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
-					<li class="c-nav__item">
-						<a {% if p.url == page.url %}class="c-nav__link active"{% else %}class="c-nav__link"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
-					</li>{% endif %}{% endfor %}
-				</ul>
-			</nav>
-		</header>
+	<header class="o-wrap c-header" role="banner">
+		<a class="c-header__title" href="{{ site.baseurl }}/">{{ site.name }}</a>
+		<nav class="c-header__nav" role="navigation">
+			<ul class="c-nav">{% assign pages = site.pages | sort:"order" %}{% for p in pages %}{% if p.order >= 1 %}
+				<li class="c-nav__item">
+					<a {% if p.url == page.url %}class="c-nav__link active"{% else %}class="c-nav__link"{% endif %} href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+				</li>{% endif %}{% endfor %}
+			</ul>
+		</nav>
+	</header>

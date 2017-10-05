@@ -1,0 +1,6 @@
+// Global namespace for main object
+$main-namespace: "o-main" !default;
+
+.#{$main-namespace} {
+    padding: 2rem 0;
+}

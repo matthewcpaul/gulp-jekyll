@@ -12,3 +12,4 @@ _styles/css
 Gemfile.lock
 node_modules
 .bundle
+package-lock.json
