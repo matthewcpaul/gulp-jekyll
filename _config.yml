@@ -1,8 +1,8 @@
 # Site Config
 name: "Gulp-Jekyll"
 description: A basic Jekyll build set up with gulp, gulp-sass, browser-sync, and gulp-gh-pages
-baseurl: "/jekyll-gulp"
-url: https://matthewcpaul.github.io/jekyll-gulp
+baseurl: "/gulp-jekyll"
+url: https://matthewcpaul.github.io/gulp-jekyll
 
 # Build Settings
 markdown: kramdown
