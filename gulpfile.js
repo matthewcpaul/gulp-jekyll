@@ -19,23 +19,11 @@ gulp.task('production-build', shell.task(['bundle exec jekyll build --config _co
 // Compile SCSS into CSS, sourcemaps, autoprefixer, cssnano + auto-inject into browsers
 gulp.task('sass', function() {
   return gulp.src(['_styles/scss/style.scss'])
-  .pipe(sass({
-    includePaths: [
-      'node_modules/ibm-design-colors',
-    ]
-  }))
+  .pipe(sass({}))
   .pipe(autoprefixer())
   .pipe(nano({discardComments: {removeAll: true}}))
   .pipe(gulp.dest('_site/assets/css'))
   .pipe(browserSync.stream());
-});
-
-// Create icon-store.svg
-gulp.task('icons', function() {
-  return gulp.src(['node_modules/ibm-design-icons/dist/svg/**/*.svg', 'images/**/*.svg'])
-    .pipe(svgstore())
-    .pipe(rename('icon-store.svg'))
-    .pipe(gulp.dest('_site/images/'));
 });
 
 // Start a local server with browser-sync + watch for changes
@@ -44,13 +32,13 @@ gulp.task('serve', function() {
     server: { baseDir: '_site/' }
   });
 
-  gulp.watch('_styles/scss/**/*.scss', gulp.series('local-build', 'sass', 'icons'));
-  gulp.watch(['_includes/*.html', '_layouts/*.html', 'index.md', '**/*.md'], gulp.series('local-build', 'sass', 'icons'));
+  gulp.watch('_styles/scss/**/*.scss', gulp.series('local-build', 'sass'));
+  gulp.watch(['_includes/*.html', '_layouts/*.html', 'index.md', '**/*.md'], gulp.series('local-build', 'sass'));
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
 // Run sass, local-build, and serve
-gulp.task('default', gulp.series('local-build', 'sass', 'icons', 'serve'));
+gulp.task('default', gulp.series('local-build', 'sass', 'serve'));
 
 // Pipe CNAME to _site if you are using a custom URL
 gulp.task('cname', function() {
@@ -65,4 +53,4 @@ gulp.task('deploy-gh-pages', function() {
 });
 
 // Run production-build, and deploy-gh-pages
-gulp.task('deploy', gulp.series('production-build', 'sass', 'icons', 'deploy-gh-pages'));
+gulp.task('deploy', gulp.series('production-build', 'sass', 'deploy-gh-pages'));
